@@ -1,6 +1,12 @@
 MIT License
 
-Copyright (c) 2025 Iddox
+Copyright (c) 2025 MetaMops
+
+**IMPORTANT NOTICE:**
+This project is based on the original Phisher-Man repository (https://github.com/FDX100/Phisher-man) 
+which had no license. This license applies only to the UI modifications and React/Node.js 
+rewrite created by MetaMops. The original concept and phishing templates remain 
+attributed to FDX100.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +25,66 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+**COMPREHENSIVE DISCLAIMER AND LIABILITY LIMITATION**
+
+**EDUCATIONAL PURPOSE ONLY:**
+This software is created solely for educational purposes, security research, and authorized penetration testing. It is a remastered version and recreation of the original Phisher-Man concept for learning cybersecurity principles.
+
+**NO LIABILITY FOR MISUSE:**
+The authors, contributors, and copyright holders of this software (collectively "Authors") explicitly disclaim any and all liability for any misuse, illegal use, or unauthorized use of this software. The Authors are not responsible for:
+
+1. Any illegal activities conducted using this software
+2. Any unauthorized access to systems or data
+3. Any financial losses, data breaches, or security incidents
+4. Any legal consequences arising from the use of this software
+5. Any violation of local, national, or international laws
+6. Any harm caused to individuals, organizations, or systems
+
+**USER RESPONSIBILITY:**
+By using this software, you acknowledge and agree that:
+
+1. You are solely responsible for ensuring compliance with all applicable laws and regulations
+2. You will only use this software on systems you own or have explicit written permission to test
+3. You will not use this software for any illegal, unauthorized, or malicious purposes
+4. You understand that this software is designed for local testing environments only
+5. You will not deploy this software in production environments or public networks
+6. You will not use this software to target real users or real systems without authorization
+
+**TECHNICAL LIMITATIONS:**
+This software is designed with the following technical limitations to prevent real-world attacks:
+
+1. Local environment variables and configurations
+2. No external network connectivity for actual credential harvesting
+3. Simulated templates for educational demonstration only
+4. Built-in safeguards to prevent unauthorized deployment
+
+**NO WARRANTIES:**
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
+
+1. WARRANTIES OF MERCHANTABILITY
+2. WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE
+3. WARRANTIES OF NON-INFRINGEMENT
+4. WARRANTIES OF SECURITY OR SAFETY
+5. WARRANTIES OF LEGAL COMPLIANCE
+
+**INDEMNIFICATION:**
+You agree to indemnify, defend, and hold harmless the Authors from any and all claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising from or related to your use of this software.
+
+**GOVERNING LAW:**
+This license shall be governed by and construed in accordance with the laws of the jurisdiction where the Authors reside, without regard to conflict of law principles.
+
+**SEVERABILITY:**
+If any provision of this license is found to be unenforceable or invalid, the remaining provisions shall remain in full force and effect.
+
+**ACCEPTANCE:**
+By downloading, installing, or using this software, you acknowledge that you have read, understood, and agree to be bound by the terms of this license and disclaimer.
+
+**FINAL NOTICE:**
+This software is a remastered educational tool. The Authors have taken reasonable steps to ensure it is used only for legitimate educational purposes. Any misuse is entirely the responsibility of the user, and the Authors disclaim all liability for such misuse.
+
+---
+
+**For questions or concerns, contact: MetaMops Organization**
